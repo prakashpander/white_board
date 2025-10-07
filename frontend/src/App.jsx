@@ -18,7 +18,7 @@ function App() {
   const fetchToken = async () => {
 
     try {
-      const res = await axios.post("http://localhost:3000/api/genrate-token", {
+      const res = await axios.post("https://white-board-dimq.onrender.com/api/genrate-token", {
         roomId: roomID,
         userId: userID
       });
