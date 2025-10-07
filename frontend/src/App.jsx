@@ -26,6 +26,7 @@ function App() {
 
     } catch (error) {
       console.log("fetch token error = ", error);
+      setTimeout(fetchToken, 1000);
     }
   };
 
