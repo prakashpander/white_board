@@ -77,7 +77,7 @@ function App() {
     <div className='h-auto w-100wh overflow-hidden'>
       <div className='h-[100vh] bg-black pt-4 pb-4'>
 
-        {!isBoardReady ? (<div className='flex justify-center items-center'><p className='text-white text-center'>whiteboard loding...</p></div>) : (
+        {!isBoardReady ? (<p className='text-white text-center'>whiteboard loding...</p>) : (
 
           <div id="parentDomID" className='h-full w-full'>
           </div>
