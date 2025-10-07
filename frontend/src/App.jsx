@@ -12,7 +12,6 @@ function App() {
 
   const [roomID] = useState(String(Math.floor(Math.random() * 99999)));
   const [userID] = useState(String(Math.floor(Math.random() * 99999)));
-  const [isBoardReady, setIsBoardReady] = useState(false);
 
   const [token, setToken] = useState("");
 
@@ -57,7 +56,7 @@ function App() {
         perPageHeight: 900,
         pageCount: 1
       });
-      setIsBoardReady(true);
+
     } catch (error) {
       console.log("initBoard error is = ", error);
     };
@@ -79,7 +78,6 @@ function App() {
 
           <div id="parentDomID" className='h-full w-full'>
             </div>
-        {!isBoardReady && (<p className='text-white text-center'>whiteboard loding...</p>)}
 
         <div>
           <Tools currentTool={currentTool} onClick={(tool) => {
