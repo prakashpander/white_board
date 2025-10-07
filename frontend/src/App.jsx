@@ -12,7 +12,7 @@ function App() {
 
   const [roomID] = useState(String(Math.floor(Math.random() * 99999)));
   const [userID] = useState(String(Math.floor(Math.random() * 99999)));
-  const [isBoardReady , setIsBoardReady] = useState(false);
+  const [isBoardReady, setIsBoardReady] = useState(false);
 
   const [token, setToken] = useState("");
 
@@ -24,7 +24,7 @@ function App() {
         userId: userID
       });
       setToken(res.data.token);
-     
+
     } catch (error) {
       console.log("fetch token error = ", error);
       setTimeout(fetchToken, 1000);
@@ -57,7 +57,7 @@ function App() {
         perPageHeight: 900,
         pageCount: 1
       });
-       setIsBoardReady(true);
+      setIsBoardReady(true);
     } catch (error) {
       console.log("initBoard error is = ", error);
     };
@@ -77,11 +77,11 @@ function App() {
     <div className='h-auto w-100wh overflow-hidden'>
       <div className='h-[100vh] bg-black pt-4 pb-4'>
 
-       {!isBoardReady ? (<div className='h-full w-full flex justify-center items-center'><p className='text-white text-center mt-10'>whiteboard loding...</p></div>) : (
+        {!isBoardReady ? (<div className='flex justify-center items-center'><p className='text-white text-center'>whiteboard loding...</p></div>) : (
 
-        <div id="parentDomID" className='h-full w-full'>
-        </div>
-       )}
+          <div id="parentDomID" className='h-full w-full'>
+          </div>
+        )}
 
         <div>
           <Tools currentTool={currentTool} onClick={(tool) => {
