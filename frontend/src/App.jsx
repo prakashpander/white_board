@@ -75,8 +75,12 @@ function App() {
   return (
     <div className='h-auto w-100wh overflow-hidden'>
       <div className='h-[100vh] bg-black pt-4 pb-4'>
+        
+       {!token ? (<p>whiteboard loding...</p>) : (
+
         <div id="parentDomID" className='h-full w-full'>
         </div>
+       )}
 
         <div>
           <Tools currentTool={currentTool} onClick={(tool) => {
